@@ -391,5 +391,14 @@
   },
   "docType_other": {
     "message": "Otro documento"
+  },
+  "useSiteAccount": {
+    "message": "Usar mi cuenta de DealerInk"
+  },
+  "useSiteBody": {
+    "message": "¿Ya inició sesión en DealerInk en este navegador? Conecte con un clic, sin contraseña."
+  },
+  "orOtherAccount": {
+    "message": "O inicie sesión con otra cuenta"
   }
 }

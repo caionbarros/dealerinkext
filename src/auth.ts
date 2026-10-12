@@ -33,9 +33,9 @@ function isNetworkError(error: unknown): boolean {
 }
 
 /**
- * Where the signed-in person stands. Order matters: the second factor comes
- * before the plan, because the database only answers about plans for a
- * session that passed two-factor.
+ * Where the signed-in person stands. The database decides first: a session
+ * connected from the DealerInk site counts as two-factor verified there, so
+ * only when the database says two-factor is missing is the code asked for.
  */
 export async function getAccess(): Promise<Access> {
   const { data: sessionData } = await supabase.auth.getSession();
@@ -43,31 +43,25 @@ export async function getAccess(): Promise<Access> {
   if (!session) return { state: "signed_out" };
   const email = session.user.email ?? "";
 
-  const { data: aal, error: aalError } =
-    await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
-  if (aalError) {
-    return isNetworkError(aalError) ? { state: "offline", email } : { state: "signed_out" };
-  }
-  if (aal.currentLevel !== "aal2") {
-    const { data: factors, error } = await supabase.auth.mfa.listFactors();
-    if (error) return isNetworkError(error) ? { state: "offline", email } : { state: "signed_out" };
-    const totp = factors.totp.find((factor) => factor.status === "verified");
-    if (!totp) return { state: "enroll", email };
-    return { state: "code", factorId: totp.id, email };
-  }
-
   const { data, error } = await supabase.rpc("my_extension_access");
   if (error) {
     if (isNetworkError(error)) return { state: "offline", email };
+    // An expired or revoked session reads as signed out.
+    if (/jwt|token|session|auth/i.test(error.message ?? "")) {
+      await supabase.auth.signOut({ scope: "local" }).catch(() => undefined);
+      return { state: "signed_out" };
+    }
     // The function is missing until the DealerInk database is updated.
     return { state: "denied", email, reason: "unavailable" };
   }
   const answer = data as unknown as AccessAnswer;
   if (answer.allowed) return { state: "ok", email, dealerships: answer.dealerships };
   if (answer.reason === "mfa_required") {
-    // The token predates two-factor; ask for the code again.
-    const { data: factors } = await supabase.auth.mfa.listFactors();
-    const totp = factors?.totp.find((factor) => factor.status === "verified");
+    const { data: factors, error: factorsError } = await supabase.auth.mfa.listFactors();
+    if (factorsError) {
+      return isNetworkError(factorsError) ? { state: "offline", email } : { state: "signed_out" };
+    }
+    const totp = factors.totp.find((factor) => factor.status === "verified");
     return totp ? { state: "code", factorId: totp.id, email } : { state: "enroll", email };
   }
   return {

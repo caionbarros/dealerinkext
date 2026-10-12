@@ -34,15 +34,24 @@ export async function mountAuth(
   container: HTMLElement,
   onReady: (access: OkAccess) => void,
 ): Promise<void> {
+  let ready = false;
   async function refresh() {
     container.replaceChildren(el("p", { className: "muted" }, [t("checking")]));
     render(await getAccess());
   }
 
+  // Signing in from the DealerInk site happens in another tab: follow it here.
+  const onStorage = (changes: Record<string, chrome.storage.StorageChange>, area: string) => {
+    if (area === "local" && "dealerink.session" in changes && !ready) void refresh();
+  };
+  chrome.storage.onChanged.addListener(onStorage);
+
   function render(access: Access) {
     container.replaceChildren();
     switch (access.state) {
       case "ok":
+        ready = true;
+        chrome.storage.onChanged.removeListener(onStorage);
         onReady(access);
         return;
       case "signed_out":
@@ -92,10 +101,20 @@ export async function mountAuth(
       className: "input",
     });
     const message = el("p", { className: "error", role: "alert" });
-    const submit = el("button", { type: "submit", className: "button primary" }, [t("signIn")]);
+    const submit = el("button", { type: "submit", className: "button" }, [t("signIn")]);
+    const useSite = el("button", { type: "button", className: "button primary" }, [
+      t("useSiteAccount"),
+    ]);
+    useSite.addEventListener("click", () => {
+      void chrome.tabs.create({
+        url: `${DEALERINK_URL}/extension/connect?ext=${chrome.runtime.id}`,
+      });
+    });
     const form = el("form", { className: "stack" }, [
       el("h2", { className: "title" }, [t("signInTitle")]),
-      el("p", { className: "muted" }, [t("signInBody")]),
+      el("p", { className: "muted" }, [t("useSiteBody")]),
+      useSite,
+      el("p", { className: "divider-text muted small" }, [t("orOtherAccount")]),
       el("label", { htmlFor: "auth-email", className: "label" }, [t("email")]),
       email,
       el("label", { htmlFor: "auth-password", className: "label" }, [t("password")]),
@@ -120,7 +139,6 @@ export async function mountAuth(
       await refresh();
     });
     container.append(form);
-    email.focus();
   }
 
   function renderCode(factorId: string, emailAddress: string) {

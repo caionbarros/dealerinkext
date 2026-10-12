@@ -7,7 +7,9 @@
  * chrome.storage.session.
  */
 import { t } from "./i18n";
+import { DEALERINK_URL } from "./config";
 import { editorUrl, isPdfUrl, type PdfTabs } from "./shared";
+import { supabase } from "./supabase";
 
 const MENU_ID = "dealerink-edit-link";
 
@@ -107,3 +109,37 @@ function openDownload(notificationId: string): void {
 
 chrome.notifications.onButtonClicked.addListener((notificationId) => openDownload(notificationId));
 chrome.notifications.onClicked.addListener((notificationId) => openDownload(notificationId));
+
+/*
+ * "Use my DealerInk account": the DealerInk site (and only it, see
+ * externally_connectable in the manifest) hands over a one-time token for the
+ * person signed in there. The extension signs in with its own session and
+ * claims it, then closes the site's tab.
+ */
+chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => {
+  const fromSite = sender.origin === new URL(DEALERINK_URL).origin;
+  const tokenHash = (message as { type?: string; tokenHash?: unknown } | null)?.tokenHash;
+  if (!fromSite || (message as { type?: string })?.type !== "dealerink-connect" || typeof tokenHash !== "string") {
+    sendResponse({ ok: false });
+    return false;
+  }
+  void (async () => {
+    try {
+      // Whoever was signed in here before is replaced by the site's account.
+      await supabase.auth.signOut({ scope: "local" });
+      const { error } = await supabase.auth.verifyOtp({ token_hash: tokenHash, type: "magiclink" });
+      if (error) throw error;
+      const { data: claimed, error: claimError } = await supabase.rpc("claim_extension_link", {
+        _token_hash: tokenHash,
+      });
+      if (claimError || claimed !== true) throw claimError ?? new Error("not_claimed");
+      sendResponse({ ok: true });
+      const tabId = sender.tab?.id;
+      if (tabId !== undefined) setTimeout(() => void chrome.tabs.remove(tabId).catch(() => undefined), 1500);
+    } catch {
+      await supabase.auth.signOut({ scope: "local" }).catch(() => undefined);
+      sendResponse({ ok: false });
+    }
+  })();
+  return true;
+});
