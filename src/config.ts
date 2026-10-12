@@ -3,7 +3,8 @@
  * two-factor, same plans. The publishable key is public by design (it ships in
  * the DealerInk web app too); every rule is enforced by the database.
  */
-export const SUPABASE_URL = "https://jpbidhibblqphtzeuffm.supabase.co";
+/** Through the DealerInk site, which forwards to the backend (dealerink: src/routes/api/sb). */
+export const SUPABASE_URL = "https://dealerink.shiftcore.io/api/sb";
 export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_JaB3ZUaSaeNd9Y9_wSeXLQ_Kt19bprW";
 
 /** Where people create an account, set up two-factor and manage the plan. */
