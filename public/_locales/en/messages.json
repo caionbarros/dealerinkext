@@ -1,0 +1,212 @@
+{
+  "extName": {
+    "message": "DealerInk PDF Editor"
+  },
+  "extDescription": {
+    "message": "Rotate, reorder, delete, merge and split PDF pages right in Chrome. For DealerInk dealerships."
+  },
+  "badgeTitle": {
+    "message": "PDF found: click to edit it"
+  },
+  "menuEditLink": {
+    "message": "Edit this PDF in DealerInk"
+  },
+  "notifyTitle": {
+    "message": "PDF downloaded"
+  },
+  "notifyBody": {
+    "message": "Edit $1 in DealerInk?"
+  },
+  "notifyEdit": {
+    "message": "Edit"
+  },
+  "notifyToggle": {
+    "message": "Offer to edit PDFs I download"
+  },
+  "checking": {
+    "message": "Checking your account…"
+  },
+  "signInTitle": {
+    "message": "Sign in"
+  },
+  "signInBody": {
+    "message": "Use your DealerInk email and password."
+  },
+  "email": {
+    "message": "Email"
+  },
+  "password": {
+    "message": "Password"
+  },
+  "signIn": {
+    "message": "Sign in"
+  },
+  "noAccount": {
+    "message": "No account yet?"
+  },
+  "createAccount": {
+    "message": "Create one in DealerInk"
+  },
+  "codeTitle": {
+    "message": "Two-factor code"
+  },
+  "codeBody": {
+    "message": "Enter the 6-digit code from your authenticator app."
+  },
+  "code": {
+    "message": "Code"
+  },
+  "verify": {
+    "message": "Verify"
+  },
+  "signOut": {
+    "message": "Sign out"
+  },
+  "signedInAs": {
+    "message": "Signed in as $1."
+  },
+  "checkAgain": {
+    "message": "Check again"
+  },
+  "enrollTitle": {
+    "message": "Set up two-factor first"
+  },
+  "enrollBody": {
+    "message": "The editor needs two-factor verification. Open DealerInk, set it up under Settings, Security, then click Check again."
+  },
+  "openSecurity": {
+    "message": "Open DealerInk security settings"
+  },
+  "openDealerInk": {
+    "message": "Open DealerInk"
+  },
+  "deniedTitle": {
+    "message": "The editor is not available"
+  },
+  "deniedDisabled": {
+    "message": "This account was switched off. Contact DealerInk support."
+  },
+  "deniedNoDealership": {
+    "message": "This account does not belong to a dealership in DealerInk."
+  },
+  "deniedNoPlan": {
+    "message": "Your dealership's DealerInk plan is not active. Ask the dealership owner to renew it."
+  },
+  "deniedUnavailable": {
+    "message": "The plan check is not available yet. Try again in a few minutes."
+  },
+  "offlineTitle": {
+    "message": "No connection"
+  },
+  "offlineBody": {
+    "message": "The editor checks your account when it opens. Connect to the internet and click Check again."
+  },
+  "errorCredentials": {
+    "message": "Wrong email or password."
+  },
+  "errorCode": {
+    "message": "That code is not valid. Enter the current code."
+  },
+  "errorOffline": {
+    "message": "No internet connection."
+  },
+  "errorUnknown": {
+    "message": "Something went wrong. Try again."
+  },
+  "editThisPdf": {
+    "message": "Edit this PDF"
+  },
+  "noPdfHere": {
+    "message": "This tab is not showing a PDF. Open the editor and choose a file, or open a PDF in Chrome first."
+  },
+  "openEditor": {
+    "message": "Open the editor"
+  },
+  "addPdf": {
+    "message": "Add PDF"
+  },
+  "rotateLeft": {
+    "message": "Rotate left"
+  },
+  "rotateRight": {
+    "message": "Rotate right"
+  },
+  "deletePages": {
+    "message": "Delete"
+  },
+  "undo": {
+    "message": "Undo"
+  },
+  "redo": {
+    "message": "Redo"
+  },
+  "selectAll": {
+    "message": "Select all"
+  },
+  "downloadSelection": {
+    "message": "Download selected pages"
+  },
+  "downloadAll": {
+    "message": "Download PDF"
+  },
+  "emptyTitle": {
+    "message": "Drop PDF files here"
+  },
+  "emptyBody": {
+    "message": "Files stay on this computer. Nothing is uploaded."
+  },
+  "chooseFile": {
+    "message": "Choose files"
+  },
+  "loading": {
+    "message": "Opening…"
+  },
+  "building": {
+    "message": "Building the PDF…"
+  },
+  "downloaded": {
+    "message": "PDF saved."
+  },
+  "previewFailed": {
+    "message": "Preview not available"
+  },
+  "pageLabel": {
+    "message": "Page $1"
+  },
+  "sourcePage": {
+    "message": "page $1"
+  },
+  "pagesLabel": {
+    "message": "Pages"
+  },
+  "countPages": {
+    "message": "$1 pages. Click to select, Ctrl or Shift for more, drag to reorder, double-click to enlarge."
+  },
+  "countSelected": {
+    "message": "$1 of $2 pages selected."
+  },
+  "suffixEdited": {
+    "message": "edited"
+  },
+  "suffixSelection": {
+    "message": "pages"
+  },
+  "errorFileAccess": {
+    "message": "Chrome does not let the editor read files on this computer. Drag the file into this window, or turn on \"Allow access to file URLs\" for this extension in chrome://extensions."
+  },
+  "errorUnreachable": {
+    "message": "Could not get this PDF from the site. Download it and drag it into this window."
+  },
+  "errorNotPdf": {
+    "message": "This file is not a PDF. If the site asked you to sign in again, sign in, download the PDF and drag it here."
+  },
+  "errorDownloadMissing": {
+    "message": "The downloaded file was moved or deleted. Drag it into this window."
+  },
+  "errorEncrypted": {
+    "message": "This PDF is protected and cannot be edited."
+  },
+  "errorDamaged": {
+    "message": "This PDF could not be read. It may be damaged."
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "extName": {
+    "message": "Editor de PDF DealerInk"
+  },
+  "extDescription": {
+    "message": "Gire, reordene, elimine, combine y separe páginas de PDF en Chrome. Para concesionarios de DealerInk."
+  },
+  "badgeTitle": {
+    "message": "PDF encontrado: haga clic para editarlo"
+  },
+  "menuEditLink": {
+    "message": "Editar este PDF en DealerInk"
+  },
+  "notifyTitle": {
+    "message": "PDF descargado"
+  },
+  "notifyBody": {
+    "message": "¿Editar $1 en DealerInk?"
+  },
+  "notifyEdit": {
+    "message": "Editar"
+  },
+  "notifyToggle": {
+    "message": "Ofrecer editar los PDF que descargo"
+  },
+  "checking": {
+    "message": "Verificando su cuenta…"
+  },
+  "signInTitle": {
+    "message": "Iniciar sesión"
+  },
+  "signInBody": {
+    "message": "Use su correo y contraseña de DealerInk."
+  },
+  "email": {
+    "message": "Correo electrónico"
+  },
+  "password": {
+    "message": "Contraseña"
+  },
+  "signIn": {
+    "message": "Iniciar sesión"
+  },
+  "noAccount": {
+    "message": "¿Aún no tiene cuenta?"
+  },
+  "createAccount": {
+    "message": "Créela en DealerInk"
+  },
+  "codeTitle": {
+    "message": "Código de verificación"
+  },
+  "codeBody": {
+    "message": "Ingrese el código de 6 dígitos de su app de autenticación."
+  },
+  "code": {
+    "message": "Código"
+  },
+  "verify": {
+    "message": "Verificar"
+  },
+  "signOut": {
+    "message": "Cerrar sesión"
+  },
+  "signedInAs": {
+    "message": "Sesión iniciada como $1."
+  },
+  "checkAgain": {
+    "message": "Verificar de nuevo"
+  },
+  "enrollTitle": {
+    "message": "Configure primero la verificación en dos pasos"
+  },
+  "enrollBody": {
+    "message": "El editor requiere verificación en dos pasos. Abra DealerInk, configúrela en Configuración, Seguridad y haga clic en Verificar de nuevo."
+  },
+  "openSecurity": {
+    "message": "Abrir la seguridad de DealerInk"
+  },
+  "openDealerInk": {
+    "message": "Abrir DealerInk"
+  },
+  "deniedTitle": {
+    "message": "El editor no está disponible"
+  },
+  "deniedDisabled": {
+    "message": "Esta cuenta fue desactivada. Contacte al soporte de DealerInk."
+  },
+  "deniedNoDealership": {
+    "message": "Esta cuenta no pertenece a un concesionario en DealerInk."
+  },
+  "deniedNoPlan": {
+    "message": "El plan DealerInk de su concesionario no está activo. Pida al dueño que lo renueve."
+  },
+  "deniedUnavailable": {
+    "message": "La verificación del plan aún no está disponible. Intente de nuevo en unos minutos."
+  },
+  "offlineTitle": {
+    "message": "Sin conexión"
+  },
+  "offlineBody": {
+    "message": "El editor verifica su cuenta al abrir. Conéctese a internet y haga clic en Verificar de nuevo."
+  },
+  "errorCredentials": {
+    "message": "Correo o contraseña incorrectos."
+  },
+  "errorCode": {
+    "message": "El código no es válido. Ingrese el código actual."
+  },
+  "errorOffline": {
+    "message": "Sin conexión a internet."
+  },
+  "errorUnknown": {
+    "message": "Algo salió mal. Intente de nuevo."
+  },
+  "editThisPdf": {
+    "message": "Editar este PDF"
+  },
+  "noPdfHere": {
+    "message": "Esta pestaña no muestra un PDF. Abra el editor y elija un archivo, o abra primero un PDF en Chrome."
+  },
+  "openEditor": {
+    "message": "Abrir el editor"
+  },
+  "addPdf": {
+    "message": "Agregar PDF"
+  },
+  "rotateLeft": {
+    "message": "Girar a la izquierda"
+  },
+  "rotateRight": {
+    "message": "Girar a la derecha"
+  },
+  "deletePages": {
+    "message": "Eliminar"
+  },
+  "undo": {
+    "message": "Deshacer"
+  },
+  "redo": {
+    "message": "Rehacer"
+  },
+  "selectAll": {
+    "message": "Seleccionar todo"
+  },
+  "downloadSelection": {
+    "message": "Descargar páginas seleccionadas"
+  },
+  "downloadAll": {
+    "message": "Descargar PDF"
+  },
+  "emptyTitle": {
+    "message": "Suelte archivos PDF aquí"
+  },
+  "emptyBody": {
+    "message": "Los archivos quedan en esta computadora. No se sube nada."
+  },
+  "chooseFile": {
+    "message": "Elegir archivos"
+  },
+  "loading": {
+    "message": "Abriendo…"
+  },
+  "building": {
+    "message": "Generando el PDF…"
+  },
+  "downloaded": {
+    "message": "PDF guardado."
+  },
+  "previewFailed": {
+    "message": "Vista previa no disponible"
+  },
+  "pageLabel": {
+    "message": "Página $1"
+  },
+  "sourcePage": {
+    "message": "página $1"
+  },
+  "pagesLabel": {
+    "message": "Páginas"
+  },
+  "countPages": {
+    "message": "$1 páginas. Clic para seleccionar, Ctrl o Mayús para más, arrastre para reordenar, doble clic para ampliar."
+  },
+  "countSelected": {
+    "message": "$1 de $2 páginas seleccionadas."
+  },
+  "suffixEdited": {
+    "message": "editado"
+  },
+  "suffixSelection": {
+    "message": "paginas"
+  },
+  "errorFileAccess": {
+    "message": "Chrome no permite que el editor lea archivos de esta computadora. Arrastre el archivo a esta ventana o active \"Permitir acceso a URL de archivo\" para esta extensión en chrome://extensions."
+  },
+  "errorUnreachable": {
+    "message": "No se pudo obtener este PDF del sitio. Descárguelo y arrástrelo a esta ventana."
+  },
+  "errorNotPdf": {
+    "message": "Este archivo no es un PDF. Si el sitio pidió iniciar sesión de nuevo, hágalo, descargue el PDF y arrástrelo aquí."
+  },
+  "errorDownloadMissing": {
+    "message": "El archivo descargado se movió o eliminó. Arrástrelo a esta ventana."
+  },
+  "errorEncrypted": {
+    "message": "Este PDF está protegido y no se puede editar."
+  },
+  "errorDamaged": {
+    "message": "No se pudo leer este PDF. Puede estar dañado."
+  }
+}

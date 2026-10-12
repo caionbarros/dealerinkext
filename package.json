@@ -1,0 +1,22 @@
+{
+  "name": "dealerink-pdf-editor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "package": "npm run build && cd dist && zip -qr ../dealerink-pdf-editor.zip ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "5.4.149"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.326",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
