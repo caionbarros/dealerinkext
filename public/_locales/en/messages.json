@@ -208,5 +208,188 @@
   },
   "errorDamaged": {
     "message": "This PDF could not be read. It may be damaged."
+  },
+  "tabPages": {
+    "message": "Pages"
+  },
+  "tabPackage": {
+    "message": "Lender package"
+  },
+  "editText": {
+    "message": "Edit text"
+  },
+  "editedBadge": {
+    "message": "Edited"
+  },
+  "editHint": {
+    "message": "Click a line to change it. Right-click a change to undo it."
+  },
+  "textSize": {
+    "message": "Size of new text"
+  },
+  "addText": {
+    "message": "Add text"
+  },
+  "done": {
+    "message": "Done"
+  },
+  "editTextLabel": {
+    "message": "Text"
+  },
+  "errorCharacters": {
+    "message": "These characters cannot be written in a PDF with standard fonts: $1"
+  },
+  "editingPage": {
+    "message": "Page $1 of $2"
+  },
+  "editLineLabel": {
+    "message": "Edit: $1"
+  },
+  "erased": {
+    "message": "(erased)"
+  },
+  "editRevertHint": {
+    "message": "Click to change. Right-click to undo this change."
+  },
+  "editNoText": {
+    "message": "This page has no text to edit (it may be a scan). Use Add text."
+  },
+  "packageTitle": {
+    "message": "Documents found"
+  },
+  "packageHint": {
+    "message": "Check what goes to the lender and set the order. What you uncheck is remembered for that type of document."
+  },
+  "downloadPackage": {
+    "message": "Download lender package"
+  },
+  "coverInclude": {
+    "message": "Add a cover page"
+  },
+  "coverRooftop": {
+    "message": "Store"
+  },
+  "coverRooftopPick": {
+    "message": "Choose a store"
+  },
+  "coverDealerName": {
+    "message": "Dealership"
+  },
+  "coverDealerAddress": {
+    "message": "Address"
+  },
+  "coverDealerPhone": {
+    "message": "Phone"
+  },
+  "coverBuyer": {
+    "message": "Buyer"
+  },
+  "coverCoBuyer": {
+    "message": "Co-buyer"
+  },
+  "coverVehicle": {
+    "message": "Vehicle (year, make, model)"
+  },
+  "coverVin": {
+    "message": "VIN"
+  },
+  "coverStock": {
+    "message": "Stock #"
+  },
+  "coverDeal": {
+    "message": "Deal #"
+  },
+  "coverLender": {
+    "message": "Lender"
+  },
+  "coverDate": {
+    "message": "Contract date"
+  },
+  "coverNotes": {
+    "message": "Notes"
+  },
+  "includeInPackage": {
+    "message": "Send to the lender"
+  },
+  "documentType": {
+    "message": "Document type"
+  },
+  "moveUp": {
+    "message": "↑"
+  },
+  "moveDown": {
+    "message": "↓"
+  },
+  "documentPages": {
+    "message": "$1 page(s): $2 · $3"
+  },
+  "docType_buyers_order": {
+    "message": "Buyer's Order"
+  },
+  "docType_retail_installment_contract": {
+    "message": "Retail Installment Contract"
+  },
+  "docType_odometer_disclosure": {
+    "message": "Odometer Disclosure"
+  },
+  "docType_buyers_guide": {
+    "message": "Buyers Guide"
+  },
+  "docType_privacy_notice": {
+    "message": "Privacy Notice"
+  },
+  "docType_arbitration_agreement": {
+    "message": "Arbitration Agreement"
+  },
+  "docType_power_of_attorney": {
+    "message": "Power of Attorney"
+  },
+  "docType_title_application": {
+    "message": "Application for Title"
+  },
+  "docType_we_owe": {
+    "message": "We Owe / Due Bill"
+  },
+  "docType_credit_application": {
+    "message": "Credit Application"
+  },
+  "docType_e_sign_consent": {
+    "message": "E-Sign Consent"
+  },
+  "docType_temporary_permit": {
+    "message": "Temporary Permit"
+  },
+  "docType_reassignment_of_title": {
+    "message": "Reassignment of Title"
+  },
+  "docType_risk_based_pricing_notice": {
+    "message": "Risk-Based Pricing Notice"
+  },
+  "docType_theft_recovery_agreement": {
+    "message": "Vehicle Location and Theft Recovery Agreement"
+  },
+  "docType_gap_disclosure": {
+    "message": "GAP Disclosure"
+  },
+  "docType_gap_addendum": {
+    "message": "GAP Addendum"
+  },
+  "docType_itemization_of_sale": {
+    "message": "Itemization of Amount Financed"
+  },
+  "docType_state_title_application": {
+    "message": "Application for Certificate of Title"
+  },
+  "docType_vehicle_service_contract": {
+    "message": "Vehicle Service Contract"
+  },
+  "docType_satellite_radio_trial": {
+    "message": "Radio Trial Subscription"
+  },
+  "docType_scanned_document": {
+    "message": "Scanned document"
+  },
+  "docType_other": {
+    "message": "Other document"
   }
 }

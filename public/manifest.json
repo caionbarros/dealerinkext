@@ -3,7 +3,7 @@
   "name": "__MSG_extName__",
   "short_name": "DealerInk PDF",
   "description": "__MSG_extDescription__",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "default_locale": "en",
   "minimum_chrome_version": "120",
   "icons": {

@@ -208,5 +208,188 @@
   },
   "errorDamaged": {
     "message": "Não foi possível ler este PDF. Ele pode estar danificado."
+  },
+  "tabPages": {
+    "message": "Páginas"
+  },
+  "tabPackage": {
+    "message": "Pacote para o banco"
+  },
+  "editText": {
+    "message": "Editar texto"
+  },
+  "editedBadge": {
+    "message": "Editada"
+  },
+  "editHint": {
+    "message": "Clique numa linha para alterar. Clique com o botão direito numa alteração para desfazer."
+  },
+  "textSize": {
+    "message": "Tamanho do texto novo"
+  },
+  "addText": {
+    "message": "Adicionar texto"
+  },
+  "done": {
+    "message": "Concluir"
+  },
+  "editTextLabel": {
+    "message": "Texto"
+  },
+  "errorCharacters": {
+    "message": "Estes caracteres não podem ser escritos no PDF com as fontes padrão: $1"
+  },
+  "editingPage": {
+    "message": "Página $1 de $2"
+  },
+  "editLineLabel": {
+    "message": "Editar: $1"
+  },
+  "erased": {
+    "message": "(apagado)"
+  },
+  "editRevertHint": {
+    "message": "Clique para alterar. Botão direito para desfazer esta alteração."
+  },
+  "editNoText": {
+    "message": "Esta página não tem texto para editar (pode ser uma digitalização). Use Adicionar texto."
+  },
+  "packageTitle": {
+    "message": "Documentos encontrados"
+  },
+  "packageHint": {
+    "message": "Marque o que vai para o banco e defina a ordem. O que você desmarcar fica lembrado para aquele tipo de documento."
+  },
+  "downloadPackage": {
+    "message": "Baixar pacote para o banco"
+  },
+  "coverInclude": {
+    "message": "Incluir capa"
+  },
+  "coverRooftop": {
+    "message": "Loja"
+  },
+  "coverRooftopPick": {
+    "message": "Escolha uma loja"
+  },
+  "coverDealerName": {
+    "message": "Concessionária"
+  },
+  "coverDealerAddress": {
+    "message": "Endereço"
+  },
+  "coverDealerPhone": {
+    "message": "Telefone"
+  },
+  "coverBuyer": {
+    "message": "Comprador"
+  },
+  "coverCoBuyer": {
+    "message": "Co-comprador"
+  },
+  "coverVehicle": {
+    "message": "Veículo (ano, marca, modelo)"
+  },
+  "coverVin": {
+    "message": "VIN"
+  },
+  "coverStock": {
+    "message": "Stock #"
+  },
+  "coverDeal": {
+    "message": "Negócio #"
+  },
+  "coverLender": {
+    "message": "Banco"
+  },
+  "coverDate": {
+    "message": "Data do contrato"
+  },
+  "coverNotes": {
+    "message": "Observações"
+  },
+  "includeInPackage": {
+    "message": "Enviar ao banco"
+  },
+  "documentType": {
+    "message": "Tipo de documento"
+  },
+  "moveUp": {
+    "message": "↑"
+  },
+  "moveDown": {
+    "message": "↓"
+  },
+  "documentPages": {
+    "message": "$1 página(s): $2 · $3"
+  },
+  "docType_buyers_order": {
+    "message": "Buyer's Order"
+  },
+  "docType_retail_installment_contract": {
+    "message": "Retail Installment Contract"
+  },
+  "docType_odometer_disclosure": {
+    "message": "Odometer Disclosure Statement"
+  },
+  "docType_buyers_guide": {
+    "message": "Buyers Guide"
+  },
+  "docType_privacy_notice": {
+    "message": "Privacy Notice"
+  },
+  "docType_arbitration_agreement": {
+    "message": "Arbitration Agreement"
+  },
+  "docType_power_of_attorney": {
+    "message": "Power of Attorney"
+  },
+  "docType_title_application": {
+    "message": "Application for Title"
+  },
+  "docType_we_owe": {
+    "message": "We Owe / Compromisso pendente"
+  },
+  "docType_credit_application": {
+    "message": "Credit Application"
+  },
+  "docType_e_sign_consent": {
+    "message": "E-Sign Consent"
+  },
+  "docType_temporary_permit": {
+    "message": "Temporary Permit"
+  },
+  "docType_reassignment_of_title": {
+    "message": "Reassignment of Title"
+  },
+  "docType_risk_based_pricing_notice": {
+    "message": "Risk-Based Pricing Notice"
+  },
+  "docType_theft_recovery_agreement": {
+    "message": "Vehicle Location and Theft Recovery Agreement"
+  },
+  "docType_gap_disclosure": {
+    "message": "GAP Disclosure"
+  },
+  "docType_gap_addendum": {
+    "message": "GAP Addendum"
+  },
+  "docType_itemization_of_sale": {
+    "message": "Itemization of Amount Financed"
+  },
+  "docType_state_title_application": {
+    "message": "Application for Certificate of Title"
+  },
+  "docType_vehicle_service_contract": {
+    "message": "Vehicle Service Contract"
+  },
+  "docType_satellite_radio_trial": {
+    "message": "Radio Trial Subscription"
+  },
+  "docType_scanned_document": {
+    "message": "Documento digitalizado"
+  },
+  "docType_other": {
+    "message": "Outro documento"
   }
 }

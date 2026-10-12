@@ -375,3 +375,219 @@ body.editor #root:not(.workspace) {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
 }
+
+/* --------------------------------------------------------------- views */
+
+.stack.tight {
+  gap: 4px;
+}
+
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+
+.input.compact {
+  width: auto;
+  min-height: 34px;
+  padding: 4px 8px;
+}
+
+.button.icon {
+  min-width: 36px;
+  padding: 6px 8px;
+}
+
+.button.active {
+  border-color: var(--primary);
+  background: var(--selected);
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  padding: 8px 14px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab[aria-selected="true"] {
+  border-bottom-color: var(--primary);
+  color: var(--text);
+}
+
+.card .badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------ package */
+
+.package {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 48px;
+}
+
+.package-main,
+.package-side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.package-side {
+  position: sticky;
+  top: 70px;
+}
+
+.package-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.package-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.package-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.package-row.excluded {
+  opacity: 0.55;
+}
+
+@media (max-width: 900px) {
+  .package {
+    grid-template-columns: 1fr;
+  }
+  .package-side {
+    position: static;
+  }
+}
+
+/* -------------------------------------------------------- page editor */
+
+.page-editor {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.page-editor-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.page-editor > .error {
+  padding: 0 16px;
+}
+
+.page-scroller {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}
+
+.page-surface {
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.25);
+  background: #ffffff;
+}
+
+.page-surface canvas {
+  display: block;
+}
+
+.page-surface.adding,
+.page-surface.adding canvas {
+  cursor: crosshair;
+}
+
+.page-surface .line,
+.page-surface .edit {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  cursor: text;
+}
+
+.page-surface .line:hover,
+.page-surface .line:focus-visible {
+  border-color: var(--focus);
+  background: rgb(37 99 235 / 0.08);
+}
+
+.page-surface .edit {
+  display: flex;
+  align-items: flex-end;
+  white-space: pre;
+  overflow: visible;
+  outline: 1px dashed rgb(37 99 235 / 0.6);
+}
+
+.page-surface .edit span {
+  line-height: 1;
+  padding-bottom: 1px;
+}
+
+.page-surface.adding .line,
+.page-surface.adding .edit {
+  pointer-events: none;
+}
+
+.inline-edit {
+  position: absolute;
+  z-index: 2;
+  padding: 0 2px;
+  border: 2px solid var(--focus);
+  border-radius: 2px;
+  background: #ffffff;
+  color: #000000;
+}
