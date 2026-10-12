@@ -7,7 +7,7 @@
  * chrome.storage.session.
  */
 import { t } from "./i18n";
-import { DEALERINK_URL } from "./config";
+import { DEALERINK_ORIGINS } from "./config";
 import { editorUrl, isPdfUrl, type PdfTabs } from "./shared";
 import { supabase } from "./supabase";
 
@@ -117,7 +117,7 @@ chrome.notifications.onClicked.addListener((notificationId) => openDownload(noti
  * claims it, then closes the site's tab.
  */
 chrome.runtime.onMessageExternal.addListener((message, sender, sendResponse) => {
-  const fromSite = sender.origin === new URL(DEALERINK_URL).origin;
+  const fromSite = !!sender.origin && DEALERINK_ORIGINS.includes(sender.origin);
   const tokenHash = (message as { type?: string; tokenHash?: unknown } | null)?.tokenHash;
   if (!fromSite || (message as { type?: string })?.type !== "dealerink-connect" || typeof tokenHash !== "string") {
     sendResponse({ ok: false });

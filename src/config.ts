@@ -7,4 +7,11 @@ export const SUPABASE_URL = "https://jpbidhibblqphtzeuffm.supabase.co";
 export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_JaB3ZUaSaeNd9Y9_wSeXLQ_Kt19bprW";
 
 /** Where people create an account, set up two-factor and manage the plan. */
-export const DEALERINK_URL = "https://dealerink.lovable.app";
+export const DEALERINK_URL = "https://dealerink.shiftcore.io";
+
+/**
+ * Sites allowed to hand the extension a sign-in. The Lovable address is the
+ * platform's fallback for the same app; keep both lists (this one and
+ * externally_connectable in manifest.json) in step.
+ */
+export const DEALERINK_ORIGINS = ["https://dealerink.shiftcore.io", "https://dealerink.lovable.app"];
