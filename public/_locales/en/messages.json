@@ -90,7 +90,7 @@
     "message": "This account does not belong to a dealership in DealerInk."
   },
   "deniedNoPlan": {
-    "message": "Your dealership's DealerInk plan is not active. Ask the dealership owner to renew it."
+    "message": "Your dealership's plan is not active or does not include the PDF editor. Ask the dealership owner or DealerInk support."
   },
   "deniedUnavailable": {
     "message": "The plan check is not available yet. Try again in a few minutes."

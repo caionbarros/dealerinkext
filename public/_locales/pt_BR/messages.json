@@ -90,7 +90,7 @@
     "message": "Esta conta não pertence a nenhuma concessionária no DealerInk."
   },
   "deniedNoPlan": {
-    "message": "O plano DealerInk da sua concessionária não está ativo. Peça ao dono da concessionária para renovar."
+    "message": "O plano da sua concessionária não está ativo ou não inclui o editor de PDF. Fale com o dono da concessionária ou com o suporte do DealerInk."
   },
   "deniedUnavailable": {
     "message": "A verificação do plano ainda não está disponível. Tente de novo em alguns minutos."
